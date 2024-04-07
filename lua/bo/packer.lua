@@ -17,7 +17,7 @@ return require('packer').startup(function(use)
 		as = 'rose-pine',
 		config = function()
 			vim.cmd('colorscheme rose-pine')
-		end  
+		end
 	}
 	-- Treesitter
 	use {
@@ -34,7 +34,7 @@ return require('packer').startup(function(use)
 }
 -- Undo tree
 -- Just like a history
-use {'mbbill/undotree'} 
+use {'mbbill/undotree'}
 
 use {'tpope/vim-fugitive'}
 use {
