@@ -1,14 +1,14 @@
-local lsp = require('lsp-zero') 
+local lsp = require('lsp-zero')
 require('lspconfig').intelephense.setup({})
 local lsp_zero = require('lsp-zero')
 
 -- command mapping configuration
 local cmp = require('cmp')
-local cmp_action = require('lsp-zero').cmp_action()
+local cmp_select = {behavior = cmp.SelectBehavior.select}
 local cmp_mappings = lsp.defaults.cmp_mappings ({
     ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
-    ['<C-n>'] = cmp.mapping.select_next_item(cmp_select), 
-    ['<C-y>'] = cmp.mapping.confirm({ select = true }), 
+    ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
+    ['<C-y>'] = cmp.mapping.confirm({ select = true }),
     ['<C-Space>'] = cmp.mapping.complete(),
 })
 
@@ -72,5 +72,4 @@ require('mason-lspconfig').setup({
         end,
     }
 })
-
 
